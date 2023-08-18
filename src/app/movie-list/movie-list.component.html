@@ -1,0 +1,22 @@
+
+<div>
+  
+  
+  <div class="row">
+    <div class="card movie_card col-lg-4 mt-3" *ngFor="let movie of allMovies   ">
+      <div [routerLink]="['/moviesDetails',movie.id]">
+        <img
+          [src]="basepath + movie.poster_path"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ movie.title| mycustom }}</h5>
+          <span class="movie_info">{{ movie.release_date | date }}</span>
+          <p>{{movie.vote_average/2}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
