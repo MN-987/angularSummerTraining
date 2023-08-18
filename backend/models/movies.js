@@ -13,6 +13,7 @@ let mongooseSchema = mongoose.Schema({
          "video":Boolean,
          "vote_average":Number,
          "vote_count":Number
-});
+
+        });
 
 module.exports=mongoose.model("Movie",mongooseSchema);
